@@ -1,13 +1,29 @@
 //isPrime(num)
 
-//Create a function to return true or false if a number passed in a prime number.
+// check if num is 1 = false
+// check if num can divide by 1 or num modulo = 0
+// for loop range from 1 to num
+// if more then 2 return false
+
 
 function isPrime(num) {
-  if (num % 2 === 0) {
-    return false;
-  } else {
-    return true;
-  }
+var count = 0;
+
+if (num == 1) {
+  return false;
 }
 
-console.log(isPrime(3));
+for (var i = 1; i <= num; i++) {
+  if (num % i === 0) {
+    count++;
+
+  }
+}
+if (count == 2) {
+  return true;
+} else {
+  return false;
+}
+}
+
+console.log(isPrime(23));

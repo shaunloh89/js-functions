@@ -1,12 +1,25 @@
-var primesFinal = [];
-
 function isPrime(num) {
-  if (num % 2 === 0) {
-    return false;
-  } else {
-    return true;
+var count = 0;
+
+if (num == 1) {
+  return false;
+}
+
+for (var i = 1; i <= num; i++) {
+  if (num % i === 0) {
+    count++;
+
   }
 }
+if (count == 2) {
+  return true;
+} else {
+  return false;
+}
+}
+
+
+var primesFinal = [];
 
 function primes(max) {
   for (var i = 1; i <= max; i++) {
@@ -17,4 +30,4 @@ function primes(max) {
   console.log(primesFinal);
 }
 
-primes(21);
+primes(29);

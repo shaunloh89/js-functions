@@ -26,7 +26,7 @@ function letterCount(word) {
   word = word.toLowerCase().split('');
   for (var i = 0; i < word.length; i++) {
     if (reg.test(word[i])) {
-      if (obj.hasOwnProperty(word[i])) {
+      if (obj[word[i]]) {
       obj[word[i]] += 1;
     } else {
       obj[word[i]] = 1;
